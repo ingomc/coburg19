@@ -15,11 +15,18 @@
 </script>
 
 <style>
+  .card-wrapper {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding:1rem 0;
+  }
 </style>
 
 <main>
   <Header />
-  <div class="container">
+  <div class="card-wrapper container">
     {#each sortedData as itemData}
       <Card data={itemData.attributes} />
     {/each}
