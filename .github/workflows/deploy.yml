@@ -5,7 +5,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: 0 1,8,14,20 * * *
+    - cron: '* */4 * * *'
 
 jobs:
   deploy:
@@ -33,7 +33,7 @@ jobs:
       - name: Fetch API Data
         uses: JamesIves/fetch-api-data-action@1.0.15
         with:
-          ENDPOINT: https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?f=json&where=GEN%20%3D%20%27COBURG%27&outFields=*&returnGeometry=false&outSR=4326
+          ENDPOINT: https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?outFields=*&returnGeometry=false&f=json&outSR=4326&where=GEN%20%3D%20%27COBURG%27%20OR%20GEN%20%3D%20%27SCHWEINFURT%27%20OR%20GEN%20%3D%20%27HA%C3%9FBERGE%27%20OR%20GEN%20%3D%20%27LICHTENFELS%27%20OR%20GEN%20%3D%20%27KRONACH%27%20OR%20GEN%20%3D%20%27SONNEBERG%27%20OR%20GEN%20%3D%20%27HILDBURGHAUSEN%27%20OR%20GEN%20%3D%20%27BAMBERG%27
           CONFIGURATION: '{ "method": "GET" }'
 
       - name: Build Svelte

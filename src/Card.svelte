@@ -1,30 +1,31 @@
 <script>
   export let data;
-    let warningclass = "yellow";
+    let warningclass = "warning";
 
   if (data.cases7_per_100k < 35) {
-    warningclass = "green";
+    warningclass = "info";
   }
 
   if (data.cases7_per_100k >= 50) {
-    warningclass = "red";
+    warningclass = "danger";
   }
 </script>
 
 <style>
-    h3 {
-    display: inline-block;
-    color: var(--inzidenz);
-    font-size: 4em;
-    font-weight: 400;
-    padding: 0.5rem 2rem;
+  .card {
+    display:block;
+    padding:1rem;
     border-radius: 4px;
-    background-color: var(--bg);
+    margin: 1rem;
+
+    background-color: var(--card-bg);
+    color: var(--card-color);
   }
 </style>
 
 <div class={`card ${warningclass}`}>
   <h3>{Number(data.cases7_per_100k).toFixed(2)}</h3>
   <p>Bezirk: {data.BEZ},&nbsp;{data.GEN}</p>
+  <p>Fälle insgesamt: {data.cases}</p>
   <p><small>Zuletzt aktualisiert: {data.last_update}</small></p>
 </div>

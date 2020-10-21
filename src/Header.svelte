@@ -1,0 +1,54 @@
+<script>
+
+</script>
+
+<style>
+    header {
+        display:block;
+        background-color: var(--header-bg);
+        text-align: center
+    }
+
+    .wrapper {
+        padding: 0.5rem 1rem;
+    }
+
+    h1 {
+        font-size:4vw;
+        text-transform: uppercase;
+        margin:0;
+        padding:0;
+    }
+
+    h2 {
+        font-size:1.7vw;
+        padding:0 1rem;
+        margin:0;
+    }
+
+    @media (min-width:768px) {
+        h1 {
+            font-size:1.4rem;
+        }
+        
+        h2 {
+            font-size:.7rem;
+        }
+    }
+    @media (min-width:1024px) {
+        .wrapper {
+            display:flex;
+            justify-content: flex-start;
+            align-items: center
+        }
+    }
+</style>
+
+<header>
+    <div class="wrapper container">
+        <h1>🚦 Corona-Ampel für Coburg 🚦</h1>
+        <h2>
+            7-Tage Inzidenz pro 100.000 Einwohner in Coburg und Landkreis:
+        </h2>
+    </div>
+</header>
