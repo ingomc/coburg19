@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: 0 1,8,14,20 * * *
 
 jobs:
   deploy:
