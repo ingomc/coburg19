@@ -3,11 +3,11 @@
 	--header-bg: #3B424B;
 	--color: #FFFAFB;
 	--danger-bg: #F63E02;
-	--danger-contrast: #663326;
+	--danger-contrast: #4a190d;
 	--warning-bg: #F3B700;
-	--warning-contrast: #665826;
+	--warning-contrast: #443604;
 	--info-bg: #4E8D26;
-	--info-contrast: #344B31;
+	--info-contrast: #0c2f08;
 	--card-bg: var(--warning-bg);
 	--card-color: var(--warning-contrast);
 
@@ -49,4 +49,16 @@ body {
 small {
 	font-size:0.7rem;
 	font-weight: 400;
+}
+
+.redtext {
+	color: var(--danger-bg);
+}
+
+.yellowtext {
+	color: var(--warning-bg);
+}
+
+.greentext {
+	color: var(--info-bg);
 }
