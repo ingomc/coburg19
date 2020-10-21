@@ -6,7 +6,7 @@ const app = new App({
 	target: document.body,
 	props: {
 		name: 'world',
-		data: data.features[0].attributes
+		data: data.features
 	}
 });
 

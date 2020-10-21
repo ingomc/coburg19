@@ -33,7 +33,7 @@ jobs:
       - name: Fetch API Data
         uses: JamesIves/fetch-api-data-action@1.0.15
         with:
-          ENDPOINT: https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?where=1%3D1&objectIds=270&outFields=*&returnGeometry=false&f=pjson
+          ENDPOINT: https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?f=json&where=GEN%20%3D%20%27COBURG%27&outFields=*&returnGeometry=false&outSR=4326
           CONFIGURATION: '{ "method": "GET" }'
 
       - name: Build Svelte
