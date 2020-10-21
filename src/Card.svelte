@@ -21,6 +21,7 @@
     width: 100%;
     background-color: var(--card-bg);
     color: var(--card-color);
+    user-select: none;
   }
 
   @media (min-width: 768px) {
