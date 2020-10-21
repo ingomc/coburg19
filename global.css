@@ -45,3 +45,8 @@ body {
 	--card-bg: var(--danger-bg);
 	--card-color: var(--danger-contrast);
 }
+
+small {
+	font-size:0.7rem;
+	font-weight: 400;
+}
