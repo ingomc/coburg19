@@ -1,7 +1,8 @@
 <script>
+  import { fix_and_outro_and_destroy_block } from 'svelte/internal';
   import Card from './Card.svelte';
   import Header from './Header.svelte';
-  
+
   export let data;
   let sortedData = [];
   data.forEach((element) => {
@@ -119,7 +120,11 @@
           Egal ob draußen, daheim oder im Lokal.
         </li>
       </ul>
-      <p><strong /></p>
+      <center>
+        Crafted with ❤️ from
+        <a href="https://www.andre-bellmann.de/?utm_source=social-media&utm_medium=corona&utm_campaign=website">Andre Bellmann</a>
+      </center>
     </div>
   </div>
+  <div class="container" />
 </main>
