@@ -1,3 +1,6 @@
-main.svelte-shwz3e{text-align:center;padding:1em;margin:0 auto}h1.svelte-shwz3e{display:inline-block;color:var(--inzidenz);font-size:4em;font-weight:400;padding:0.5rem 2rem;border-radius:4px;background-color:var(--bg)}
+.card.svelte-sl8sqr{display:block;padding:1rem;border-radius:4px;margin:1rem;background-color:var(--card-bg);color:var(--card-color)}
+header.svelte-neik8g{display:block;background-color:var(--header-bg);text-align:center
+    }.wrapper.svelte-neik8g{padding:0.5rem 1rem}h1.svelte-neik8g{font-size:4vw;text-transform:uppercase;margin:0;padding:0}h2.svelte-neik8g{font-size:1.7vw;padding:0 1rem;margin:0}@media(min-width:768px){h1.svelte-neik8g{font-size:1.4rem}h2.svelte-neik8g{font-size:.7rem}}@media(min-width:1024px){.wrapper.svelte-neik8g{display:flex;justify-content:flex-start;align-items:center
+        }}
 
 /*# sourceMappingURL=bundle.css.map */

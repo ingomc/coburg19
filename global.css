@@ -1,28 +1,47 @@
 :root {
-	--bg: #F42C04;
-	--txt: #0F1A20;
-	--inzidenz: #0F1A20;
+	--body-bg: #292F36;
+	--header-bg: #3B424B;
+	--color: #FFFAFB;
+	--danger-bg: #F63E02;
+	--danger-contrast: #663326;
+	--warning-bg: #F3B700;
+	--warning-contrast: #665826;
+	--info-bg: #4E8D26;
+	--info-contrast: #344B31;
+	--card-bg: var(--warning-bg);
+	--card-color: var(--warning-contrast);
+
+	
 }
 
 html, body {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	margin:0;
+	padding:0;
 }
 
 body {
-	background-color: white;
-	color: var(--txt);
-	margin: 0;
-	padding: 8px;
-	box-sizing: border-box;
+	background-color: var(--body-bg);
+	color: var(--color);
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
-
-.green {
-	--bg: green;
+* {
+	box-sizing: border-box;
 }
 
-.yellow {
-	--bg: orange;
+.container {
+	max-width: 1024px;
+	margin:0 auto;
+}
+
+.info {
+	--card-bg: var(--info-bg);
+	--card-color: var(--info-contrast);
+}
+
+.danger {
+	--card-bg: var(--danger-bg);
+	--card-color: var(--danger-contrast);
 }
