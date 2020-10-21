@@ -1,5 +1,5 @@
 import App from './App.svelte';
-import data from '../actions/data.json';
+import data from '../fetch-api-data-action/data.json';
 
 
 const app = new App({
