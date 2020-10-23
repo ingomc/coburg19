@@ -41,7 +41,7 @@ jobs:
         with:
           filename: fetch-api-data-action/data.json
           key: fields
-          value: []
+          value: '[]'
 
       - name: Build Svelte
         run: npm run build
