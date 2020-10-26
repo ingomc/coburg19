@@ -2,6 +2,7 @@
   import { fix_and_outro_and_destroy_block } from 'svelte/internal';
   import Card from './Card.svelte';
   import Header from './Header.svelte';
+  import Social from './Social.svelte';
 
   export let data;
   let sortedData = [];
@@ -39,6 +40,13 @@
   </div>
 
   <div class="container">
+    <!-- Social sharing -->
+    <p>
+      <center>
+        <Social />
+      </center>
+    </p>
+
     <div class="content">
       <p>
         Einen Tag nach dem Treffen der&nbsp;<strong>Ministerpräsidenten und Kanzlerin Merkel</strong>&nbsp;hat
@@ -56,7 +64,7 @@
         bisher&nbsp;als "Kann-Regeln"
       </p>
       <p>
-        <strong><span class="darkbluetext"><span class="greentext">Grün - Inzidenz&nbsp;bis 35&nbsp;</span></span></strong>
+        <strong><span class="darkbluetext"><span class="greentext">Grün - Inzidenz&nbsp;bis 35</span></span></strong>
       </p>
       <ul>
         <li>Allgemeine AHA + L-Regeln&nbsp;&nbsp;(Abstand, Hygiene, Alltagsmaske und Lüften)</li>
@@ -122,7 +130,9 @@
       </ul>
       <center>
         Crafted with ❤️ from
-        <a href="https://www.andre-bellmann.de/?utm_source=social-media&utm_medium=corona&utm_campaign=website">Andre Bellmann</a>
+        <a
+          href="https://www.andre-bellmann.de/?utm_source=social-media&utm_medium=corona&utm_campaign=website">Andre
+          Bellmann</a>
       </center>
     </div>
   </div>
