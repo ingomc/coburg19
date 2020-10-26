@@ -49,6 +49,6 @@
 <header>
   <div class="wrapper container">
     <h1>🚦 Corona-Ampel für Coburg 🚦</h1>
-    <h2>7-Tage Inzidenz pro 100.000 Einwohner in Coburg und Landkreis:</h2>
+    <h2>7 Tage Inzidenz für Coburg und Landkreis:</h2>
   </div>
 </header>
