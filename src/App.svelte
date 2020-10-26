@@ -139,7 +139,17 @@
   <div class="container" />
 
   <!-- TRACKING -->
-  <!-- Matomo Image Tracker-->
-  <img src="https://tracking.andre-bellmann.de/matomo.php?idsite=2&amp;rec=1" style="border:0" alt="" />
-  <!-- End Matomo -->
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    (function() {
+      var u="//tracking.andre-bellmann.de/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '2']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
 </main>
