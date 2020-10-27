@@ -1,5 +1,9 @@
 {
-  "name": "Corona-Ampel",
+  "name": "Corona-Ampel Coburg",
+  "title": "Coburg: aktuelle 7 Tage Corona Inzidenz",
+  "shortTitle": "\uD83D\uDEA6 Corona-Ampel für Coburg \uD83D\uDEA6",
+  "description": "\uD83D\uDEA6 Aktuelle 7 Tage-Inzidenz pro 100.000 Einwohner für Coburg und Landkreise!  ⚠️ Alle aktuelle Zahlen",
+  "keywords": ["Inzidenz", "Ampel", "Corona", "Coburg", "Warnung", "Info", "Svelte"],
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
@@ -34,6 +38,5 @@
     ]
   },
   "main": "rollup.config.js",
-  "keywords": ["svelte", "corona"],
   "author": "Andre Bellmann"
 }
