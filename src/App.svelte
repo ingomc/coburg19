@@ -132,13 +132,14 @@
           href="https://www.andre-bellmann.de/?utm_source=social-media&utm_medium=corona&utm_campaign=website">Andre
           Bellmann</a>
           <p>
-          Basierend auf den <a href="https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0" target="_blank" rel="noopener">Daten des RKI</a></p>
+          Basierend auf den <a href="https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0" target="_blank" rel="noopener">Daten des RKI</a> Stand: {sortedData[0].attributes.last_update}</p>
       </center>
     </div>
   </div>
 
   <!-- Cookie-Free Tracking -->
   <script type="text/javascript">
+    var siteID = '1';
     var _paq = (window._paq = window._paq || []);
     _paq.push(['disableCookies']);
     _paq.push(['trackPageView']);
@@ -146,7 +147,7 @@
     (function () {
       var u = '//tracking.andre-bellmann.de/';
       _paq.push(['setTrackerUrl', u + 'phpfortr.php']);
-      _paq.push(['setSiteId', '1']);
+      _paq.push(['setSiteId', siteID]);
       var d = document,
         g = d.createElement('script'),
         s = d.getElementsByTagName('script')[0];

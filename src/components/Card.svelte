@@ -64,12 +64,8 @@
     overflow: hidden;
   }
 
-  .card__update {
-    font-size: 0.5rem;
-  }
-
   .card__cases {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 </style>
 
@@ -85,7 +81,7 @@
   </div>
   <div class="card__row">
     <div class="card__column">
-      <div class="card__update">Stand: {data.last_update}</div>
+      <!-- Left empty -->
     </div>
     <div class="card__column">
       <div class="card__cases">Fälle insgesamt: {data.cases}</div>
