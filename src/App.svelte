@@ -1,8 +1,7 @@
 <script>
-  import { fix_and_outro_and_destroy_block } from 'svelte/internal';
-  import Card from './Card.svelte';
-  import Header from './Header.svelte';
-  import Social from './Social.svelte';
+  import Card from './components/Card.svelte';
+  import Header from './components/Header.svelte';
+  import Social from './components/Social.svelte';
 
   export let data;
   let sortedData = [];
@@ -23,7 +22,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
     padding: 1rem 0;
   }
   .content {
@@ -133,13 +131,15 @@
         <a
           href="https://www.andre-bellmann.de/?utm_source=social-media&utm_medium=corona&utm_campaign=website">Andre
           Bellmann</a>
+          <p>
+          Basierend auf den <a href="https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0" target="_blank" rel="noopener">Daten des RKI</a></p>
       </center>
     </div>
   </div>
-  <div class="container" />
+
+  <!-- Cookie-Free Tracking -->
   <script type="text/javascript">
     var _paq = (window._paq = window._paq || []);
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(['disableCookies']);
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
@@ -157,4 +157,5 @@
       s.parentNode.insertBefore(g, s);
     })();
   </script>
+  
 </main>

@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "Corona-Ampel",
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
@@ -19,9 +19,21 @@
   "dependencies": {
     "sirv-cli": "^1.0.0"
   },
-  "description": "*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*",
+  "endpoint": {
+    "url": "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?",
+    "params": "outFields=*&returnGeometry=false&f=json&outSR=4326&where=",
+    "locations": [
+      "Coburg",
+      "Schweinfurt",
+      "Bamberg",
+      "Kronach",
+      "Lichtenfels",
+      "Haßberge",
+      "Hildburghausen",
+      "Sonneberg"
+    ]
+  },
   "main": "rollup.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["svelte", "corona"],
+  "author": "Andre Bellmann"
 }
