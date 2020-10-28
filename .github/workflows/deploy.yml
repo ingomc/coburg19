@@ -49,6 +49,14 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           
+      - name: FTP-Deploy
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp://ftp.FTP_HOSTNAME
+          ftp-username: ${{ secrets.FTP_LOGIN_NAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./public
+          
       - name: Artifact
         uses: actions/upload-artifact@v2
         with:
