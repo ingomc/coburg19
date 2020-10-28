@@ -1,6 +1,6 @@
 <script>
     let url = window.location;
-    // let url = "https://ingomc.github.io/coburg19/";
+    // let url = "https://www.corona-ampel-coburg.de";
     let waMessage = `Das hier ist ne coole Website ${url}`;
 </script>
 
