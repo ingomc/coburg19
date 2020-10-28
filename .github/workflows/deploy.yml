@@ -50,12 +50,15 @@ jobs:
           publish_dir: ./public
           
       - name: FTP-Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
-        with:
-          ftp-server: ftp://ftp.${{ secrets.FTP_HOSTNAME }}
-          ftp-username: ${{ secrets.FTP_LOGIN_NAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public
+        uses: HappyPrime/FTP-Deploy-Action@2.0.0
+        env:
+          FTP_METHOD: ftp
+          FTP_PORT: 21
+          FTP_SERVER: ${{ secrets.FTP_HOSTNAME }}
+          FTP_USERNAME: ${{ secrets.FTP_LOGIN_NAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          LOCAL_DIR: public
+          REMOTE_DIR: ${{ secrets.FTP_DIR }}
           
       - name: Artifact
         uses: actions/upload-artifact@v2
