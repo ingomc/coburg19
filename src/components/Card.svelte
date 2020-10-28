@@ -1,5 +1,7 @@
 <script>
+  import { onMount } from 'svelte';
   export let data;
+
   let warningclass = 'warning';
 
   if (data.cases7_per_100k < 35) {
@@ -10,18 +12,23 @@
     warningclass = 'danger';
   }
 
-
-  import { onMount } from "svelte";
-
   const apiURL = `https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_COVID19/FeatureServer/0/query?f=json&where=(NeuerFall%20IN(1%2C%20-1))%20AND%20(IdLandkreis%3D%27${data.RS}%27)&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22AnzahlFall%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&resultType=standard&cacheHint=true`;
-  let newCasesData = {};
-  let newCases = -1;
 
-  onMount(async function() {
-      const response = await fetch(apiURL);
-      newCasesData = await response.json();
-      newCases = newCasesData.features[0].attributes.value;
-      console.log(typeof newCases);
+  let promise = getNewCases();
+
+  async function getNewCases() {
+    const res = await fetch(apiURL);
+    const json = await res.json();
+
+    if (res.ok) {
+      return json.features[0].attributes.value;
+    } else {
+      throw new Error(json);
+    }
+  }
+
+  onMount(async function () {
+    promise = getNewCases();
   });
 </script>
 
@@ -95,9 +102,10 @@
   </div>
   <div class="card__row">
     <div class="card__column">
-    {#if newCases > 0}
-      <div class="card__cases">Neue Fälle: {newCases}</div>
-    {/if}
+      <div class="card__cases">
+        Neue Fälle:
+        {#await promise}...{:then number}{number}    {:catch error}Error{/await}
+      </div>
     </div>
     <div class="card__column">
       <div class="card__cases">Fälle insgesamt: {data.cases}</div>
