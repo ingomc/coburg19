@@ -48,18 +48,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          
-      - name: FTP-Deploy
-        uses: HappyPrime/FTP-Deploy-Action@2.0.0
-        env:
-          FTP_METHOD: ftp
-          FTP_PORT: 21
-          FTP_SERVER: ${{ secrets.FTP_HOSTNAME }}
-          FTP_USERNAME: ${{ secrets.FTP_LOGIN_NAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: public
-          REMOTE_DIR: ${{ secrets.FTP_DIR }}
-          
+       
       - name: Artifact
         uses: actions/upload-artifact@v2
         with:
