@@ -25,7 +25,7 @@
   },
   "endpoint": {
     "url": "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?",
-    "params": "outFields=cases%2Clast_update%2Ccases7_per_100k%2CBEZ%2CGEN%2C&returnGeometry=false&f=json&outSR=4326&where=",
+    "params": "outFields=RS%2Ccases%2Clast_update%2Ccases7_per_100k%2CBEZ%2CGEN%2C&returnGeometry=false&f=json&outSR=4326&where=",
     "locations": [
       "Coburg",
       "Schweinfurt",
