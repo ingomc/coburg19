@@ -22,7 +22,8 @@
     "build": "npm run data && rollup -c",
     "data": "node --experimental-json-modules ./scripts/fetchData.mjs",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public",
+    "prettier": "prettier --write ."
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",

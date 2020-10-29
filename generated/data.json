@@ -1,1 +1,126 @@
-{"locations":[{"id":268,"district":"Kreisfreie Stadt","name":"Bamberg","incidence":103.395241234022,"date":"29.10.2020, 00:00 Uhr","population":77373,"cases":386,"deaths":22,"newCases":30},{"id":270,"district":"Kreisfreie Stadt","name":"Coburg","incidence":51.1297234125438,"date":"29.10.2020, 00:00 Uhr","population":41072,"cases":192,"deaths":4,"newCases":4},{"id":303,"district":"Landkreis","name":"Schweinfurt","incidence":190.566936636494,"date":"29.10.2020, 00:00 Uhr","population":115445,"cases":1138,"deaths":28,"newCases":46},{"id":272,"district":"Landkreis","name":"Bamberg","incidence":79.503679593376,"date":"29.10.2020, 00:00 Uhr","population":147163,"cases":740,"deaths":38,"newCases":35},{"id":274,"district":"Landkreis","name":"Coburg","incidence":64.5555465895074,"date":"29.10.2020, 00:00 Uhr","population":86747,"cases":544,"deaths":31,"newCases":13},{"id":277,"district":"Landkreis","name":"Kronach","incidence":67.4228008929775,"date":"29.10.2020, 00:00 Uhr","population":66743,"cases":270,"deaths":3,"newCases":12},{"id":299,"district":"Landkreis","name":"Haßberge","incidence":80.5839969662495,"date":"29.10.2020, 00:00 Uhr","population":84384,"cases":372,"deaths":6,"newCases":null},{"id":294,"district":"Kreisfreie Stadt","name":"Schweinfurt","incidence":217.122749223225,"date":"29.10.2020, 00:00 Uhr","population":53426,"cases":482,"deaths":20,"newCases":32},{"id":396,"district":"Landkreis","name":"Sonneberg","incidence":31.1866521128957,"date":"29.10.2020, 00:00 Uhr","population":57717,"cases":352,"deaths":25,"newCases":3},{"id":279,"district":"Landkreis","name":"Lichtenfels","incidence":169.222475140769,"date":"29.10.2020, 00:00 Uhr","population":66776,"cases":550,"deaths":19,"newCases":27},{"id":393,"district":"Landkreis","name":"Hildburghausen","incidence":93.3588619712961,"date":"29.10.2020, 00:00 Uhr","population":63197,"cases":165,"deaths":1,"newCases":7}],"date":"29.10.2020, 00:00 Uhr"}
+{
+  "locations": [
+    {
+      "id": 268,
+      "district": "Kreisfreie Stadt",
+      "name": "Bamberg",
+      "incidence": 103.395241234022,
+      "date": "29.10.2020, 00:00 Uhr",
+      "population": 77373,
+      "cases": 386,
+      "deaths": 22,
+      "newCases": 30
+    },
+    {
+      "id": 270,
+      "district": "Kreisfreie Stadt",
+      "name": "Coburg",
+      "incidence": 51.1297234125438,
+      "date": "29.10.2020, 00:00 Uhr",
+      "population": 41072,
+      "cases": 192,
+      "deaths": 4,
+      "newCases": 4
+    },
+    {
+      "id": 303,
+      "district": "Landkreis",
+      "name": "Schweinfurt",
+      "incidence": 190.566936636494,
+      "date": "29.10.2020, 00:00 Uhr",
+      "population": 115445,
+      "cases": 1138,
+      "deaths": 28,
+      "newCases": 46
+    },
+    {
+      "id": 272,
+      "district": "Landkreis",
+      "name": "Bamberg",
+      "incidence": 79.503679593376,
+      "date": "29.10.2020, 00:00 Uhr",
+      "population": 147163,
+      "cases": 740,
+      "deaths": 38,
+      "newCases": 35
+    },
+    {
+      "id": 274,
+      "district": "Landkreis",
+      "name": "Coburg",
+      "incidence": 64.5555465895074,
+      "date": "29.10.2020, 00:00 Uhr",
+      "population": 86747,
+      "cases": 544,
+      "deaths": 31,
+      "newCases": 13
+    },
+    {
+      "id": 277,
+      "district": "Landkreis",
+      "name": "Kronach",
+      "incidence": 67.4228008929775,
+      "date": "29.10.2020, 00:00 Uhr",
+      "population": 66743,
+      "cases": 270,
+      "deaths": 3,
+      "newCases": 12
+    },
+    {
+      "id": 299,
+      "district": "Landkreis",
+      "name": "Haßberge",
+      "incidence": 80.5839969662495,
+      "date": "29.10.2020, 00:00 Uhr",
+      "population": 84384,
+      "cases": 372,
+      "deaths": 6,
+      "newCases": null
+    },
+    {
+      "id": 294,
+      "district": "Kreisfreie Stadt",
+      "name": "Schweinfurt",
+      "incidence": 217.122749223225,
+      "date": "29.10.2020, 00:00 Uhr",
+      "population": 53426,
+      "cases": 482,
+      "deaths": 20,
+      "newCases": 32
+    },
+    {
+      "id": 396,
+      "district": "Landkreis",
+      "name": "Sonneberg",
+      "incidence": 31.1866521128957,
+      "date": "29.10.2020, 00:00 Uhr",
+      "population": 57717,
+      "cases": 352,
+      "deaths": 25,
+      "newCases": 3
+    },
+    {
+      "id": 279,
+      "district": "Landkreis",
+      "name": "Lichtenfels",
+      "incidence": 169.222475140769,
+      "date": "29.10.2020, 00:00 Uhr",
+      "population": 66776,
+      "cases": 550,
+      "deaths": 19,
+      "newCases": 27
+    },
+    {
+      "id": 393,
+      "district": "Landkreis",
+      "name": "Hildburghausen",
+      "incidence": 93.3588619712961,
+      "date": "29.10.2020, 00:00 Uhr",
+      "population": 63197,
+      "cases": 165,
+      "deaths": 1,
+      "newCases": 7
+    }
+  ],
+  "date": "29.10.2020, 00:00 Uhr"
+}

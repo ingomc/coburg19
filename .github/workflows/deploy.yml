@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: "14.x"
+          node-version: '14.x'
 
       - name: Cache dependencies Node
         uses: actions/cache@v1
@@ -29,7 +29,7 @@ jobs:
 
       - name: Install
         run: npm i
-        
+
       - name: Build Svelte
         run: npm run build
 
@@ -38,7 +38,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-       
+
       - name: Artifact
         uses: actions/upload-artifact@v2
         with:
