@@ -12,7 +12,7 @@
     warningclass = 'danger';
   }
 
-if (data.cases7_per_100k >= 100) {
+  if (data.cases7_per_100k >= 100) {
     warningclass = 'superdanger';
   }
 
@@ -23,9 +23,9 @@ if (data.cases7_per_100k >= 100) {
   async function getNewCases() {
     const res = await fetch(apiURL);
     const json = await res.json();
-    const resp =  json.features[0].attributes.value;
+    const resp = json.features[0].attributes.value;
 
-    if (res.ok ) {
+    if (res.ok) {
       return resp == null ? 0 : resp;
     } else {
       throw new Error(json);
@@ -109,10 +109,7 @@ if (data.cases7_per_100k >= 100) {
   <div class="card__row">
     <div class="card__column">
       <div class="card__cases">
-      {#await promise}
-        Neue Fälle: ...{:then number}
-        Neue Fälle: {number}    
-        {:catch error}...{/await}
+        {#await promise}Neue Fälle: ...{:then number}Neue Fälle: {number}{:catch error}...{/await}
       </div>
     </div>
     <div class="card__column">
