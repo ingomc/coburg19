@@ -8,11 +8,11 @@
   }
 
   if (data.incidence >= 50 && data.incidence < 100) {
-    warningclass = "danger";
+    warningclass = 'danger';
   }
 
   if (data.incidence >= 100) {
-    warningclass = 'superdanger';
+    warningclass = "superdanger";
   }
 </script>
 
