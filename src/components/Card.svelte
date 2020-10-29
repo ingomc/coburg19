@@ -8,8 +8,12 @@
     warningclass = 'info';
   }
 
-  if (data.cases7_per_100k >= 50) {
+  if (data.cases7_per_100k >= 50 < 100) {
     warningclass = 'danger';
+  }
+
+if (data.cases7_per_100k >= 100) {
+    warningclass = 'superdanger';
   }
 
   const apiURL = `https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_COVID19/FeatureServer/0/query?f=json&where=(NeuerFall%20IN(1%2C%20-1))%20AND%20(IdLandkreis%3D%27${data.RS}%27)&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22AnzahlFall%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&resultType=standard&cacheHint=true`;
@@ -19,9 +23,10 @@
   async function getNewCases() {
     const res = await fetch(apiURL);
     const json = await res.json();
+    const resp =  json.features[0].attributes.value;
 
-    if (res.ok) {
-      return json.features[0].attributes.value;
+    if (res.ok && resp !== null ) {
+      return resp
     } else {
       throw new Error(json);
     }
@@ -103,8 +108,10 @@
   <div class="card__row">
     <div class="card__column">
       <div class="card__cases">
-        Neue Fälle:
-        {#await promise}...{:then number}{number}    {:catch error}Error{/await}
+      {#await promise}
+        Neue Fälle: ...{:then number}
+        Neue Fälle: {number}    
+        {:catch error}...{/await}
       </div>
     </div>
     <div class="card__column">
