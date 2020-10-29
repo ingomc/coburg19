@@ -30,16 +30,6 @@ jobs:
       - name: Install
         run: npm i
         
-      - name: Read package.json
-        uses: dutscher/read-package-json-actions@v1.3.37
-        id: package-json-endpoint
-
-      - name: Fetch API Data
-        uses: JamesIves/fetch-api-data-action@1.0.15
-        with:
-          ENDPOINT: ${{ steps.package-json-endpoint.outputs.endpoint }}
-          CONFIGURATION: '{ "method": "GET" }'
-
       - name: Build Svelte
         run: npm run build
 

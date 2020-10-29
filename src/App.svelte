@@ -5,14 +5,23 @@
 
   export let data;
   let sortedData = [];
-  data.forEach((element) => {
+  data.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 0;
+    }
+    return 0;
+  });
+  data.forEach((item) => {
     // SORT COBURG TO THE TOP
-    const city = element.attributes.GEN.toLowerCase();
-    const coburg = 'coburg';
-    if (city.includes(coburg)) {
-      sortedData.unshift(element);
+    const city = item.name.toLowerCase();
+    const myCity = 'Coburg';
+    if (city == myCity.toLowerCase()) {
+      sortedData.unshift(item);
     } else {
-      sortedData.push(element);
+      sortedData.push(item);
     }
   });
 </script>
@@ -33,7 +42,7 @@
   <Header />
   <div class="card-wrapper container">
     {#each sortedData as itemData}
-      <Card data={itemData.attributes} />
+      <Card data={itemData} />
     {/each}
   </div>
 
@@ -131,8 +140,15 @@
         <a
           href="https://www.andre-bellmann.de/?utm_source=social-media&utm_medium=corona&utm_campaign=website">Andre
           Bellmann</a>
-          <p>
-          Basierend auf den <a href="https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0" target="_blank" rel="noopener">Daten des RKI</a> Stand: {sortedData[0].attributes.last_update}</p>
+        <p>
+          Basierend auf den
+          <a
+            href="https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0"
+            target="_blank"
+            rel="noopener">Daten des RKI</a>
+          Stand:
+          {sortedData[0].date}
+        </p>
       </center>
     </div>
   </div>
@@ -158,5 +174,4 @@
       s.parentNode.insertBefore(g, s);
     })();
   </script>
-  
 </main>

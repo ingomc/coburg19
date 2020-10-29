@@ -1,11 +1,11 @@
 import App from './App.svelte';
-import { features } from '../fetch-api-data-action/data.json';
+import { locations } from '../generated/data.json';
 
 
 const app = new App({
 	target: document.body,
 	props: {
-		data: features
+		data: locations
 	}
 });
 
