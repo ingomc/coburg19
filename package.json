@@ -16,7 +16,7 @@
   "scripts": {
     "build": "npm run data && rollup -c",
     "data": "node --experimental-json-modules ./scripts/fetchData.mjs",
-    "dev": "npm run data && rollup -c -w",
+    "dev": "rollup -c -w",
     "start": "sirv public"
   },
   "devDependencies": {
