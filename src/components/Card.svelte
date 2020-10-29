@@ -53,12 +53,13 @@ if (data.cases7_per_100k >= 100) {
   @media (min-width: 768px) {
     .card {
       width: 40%;
+      margin: 0.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .card {
-      width: 30%;
+      width: 31%;
     }
   }
 
