@@ -1,74 +1,76 @@
 :root {
-	--body-bg: #292F36;
-	--header-bg: #3B424B;
-	--color: #FFFAFB;
-	--danger-bg: #F63E02;
-	--danger-contrast: #4a190d;
-	--superdanger-bg: #421000;
-	--superdanger-contrast: #ff3200;
-	--warning-bg: #F3B700;
-	--warning-contrast: #443604;
-	--info-bg: #4E8D26;
-	--info-contrast: #0c2f08;
-	--card-bg: var(--warning-bg);
-	--card-color: var(--warning-contrast);
+  --body-bg: #292f36;
+  --header-bg: #3b424b;
+  --color: #fffafb;
+  --danger-bg: #f63e02;
+  --danger-contrast: #4a190d;
+  --superdanger-bg: #421000;
+  --superdanger-contrast: #ff3200;
+  --warning-bg: #f3b700;
+  --warning-contrast: #443604;
+  --info-bg: #4e8d26;
+  --info-contrast: #0c2f08;
+  --card-bg: var(--warning-bg);
+  --card-color: var(--warning-contrast);
 }
 
-html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	margin:0;
-	padding:0;
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background-color: var(--body-bg);
-	color: var(--color);
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  background-color: var(--body-bg);
+  color: var(--color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
-	color: var(--color);
+  color: var(--color);
 }
 
 .container {
-	max-width: 1024px;
-	margin:0 auto;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .info {
-	--card-bg: var(--info-bg);
-	--card-color: var(--info-contrast);
+  --card-bg: var(--info-bg);
+  --card-color: var(--info-contrast);
 }
 
 .danger {
-	--card-bg: var(--danger-bg);
-	--card-color: var(--danger-contrast);
+  --card-bg: var(--danger-bg);
+  --card-color: var(--danger-contrast);
 }
 
 .superdanger {
-	--card-bg: var(--superdanger-bg);
-	--card-color: var(--superdanger-contrast);
+  --card-bg: var(--superdanger-bg);
+  --card-color: var(--superdanger-contrast);
 }
 
 small {
-	font-size:0.7rem;
-	font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 400;
 }
 
 .redtext {
-	color: var(--danger-bg);
+  color: var(--danger-bg);
 }
 
 .yellowtext {
-	color: var(--warning-bg);
+  color: var(--warning-bg);
 }
 
 .greentext {
-	color: var(--info-bg);
+  color: var(--info-bg);
 }
