@@ -25,8 +25,8 @@ if (data.cases7_per_100k >= 100) {
     const json = await res.json();
     const resp =  json.features[0].attributes.value;
 
-    if (res.ok && resp !== null ) {
-      return resp
+    if (res.ok ) {
+      return resp == null ? 0 : resp;
     } else {
       throw new Error(json);
     }
