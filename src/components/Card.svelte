@@ -88,7 +88,7 @@
   <div class="card__row">
     <div class="card__column">
       <div class="card__cases">
-        Neue Fälle: {data.newCases}
+        Neue Fälle: {data.newCases > 0 ? data.newCases : 0}
       </div>
     </div>
     <div class="card__column">
