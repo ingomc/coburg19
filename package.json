@@ -13,6 +13,11 @@
     "Svelte"
   ],
   "version": "1.0.0",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "scripts": {
     "build": "npm run data && rollup -c",
     "data": "node --experimental-json-modules ./scripts/fetchData.mjs",
@@ -37,10 +42,5 @@
     "sirv-cli": "^1.0.0"
   },
   "main": "rollup.config.js",
-  "author": "Andre Bellmann",
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  }
+  "author": "Andre Bellmann"
 }
