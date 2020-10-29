@@ -8,7 +8,7 @@
   }
 
   if (data.incidence >= 50 && data.incidence < 100) {
-    warningclass = 'danger';
+    warningclass = "danger";
   }
 
   if (data.incidence >= 100) {
@@ -87,9 +87,7 @@
   </div>
   <div class="card__row">
     <div class="card__column">
-      <div class="card__cases">
-        Neue Fälle: {data.newCases > 0 ? data.newCases : 0}
-      </div>
+      <div class="card__cases">Neue Fälle: {data.newCases > 0 ? data.newCases : 0}</div>
     </div>
     <div class="card__column">
       <div class="card__cases">Fälle insgesamt: {data.cases}</div>
