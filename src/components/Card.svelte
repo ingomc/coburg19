@@ -8,7 +8,7 @@
     warningclass = 'info';
   }
 
-  if (data.cases7_per_100k >= 50 < 100) {
+  if (data.cases7_per_100k >= 50 && data.cases7_per_100k < 100) {
     warningclass = 'danger';
   }
 
