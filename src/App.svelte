@@ -3,6 +3,7 @@
   import Header from './components/Header.svelte';
   import Social from './components/Social.svelte';
 
+  export let date;
   export let data;
   let sortedData = [];
   data.sort((a, b) => {
@@ -147,7 +148,7 @@
             target="_blank"
             rel="noopener">Daten des RKI</a>
           Stand:
-          {sortedData[0].date}
+          {date}
         </p>
       </center>
     </div>

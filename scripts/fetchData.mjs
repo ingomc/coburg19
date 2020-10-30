@@ -38,7 +38,6 @@ const handleLocation = async (location) => {
     district: location.BEZ,
     name: location.GEN,
     incidence: location.cases7_per_100k,
-    date: location.last_update,
     population: location.EWZ,
     cases: location.cases,
     deaths: location.deaths,
