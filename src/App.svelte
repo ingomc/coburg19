@@ -39,23 +39,25 @@
   }
   .message-wrapper {
     text-align: center;
+    padding: 1rem;
   }
   .message {
-    display:inline-block;
-    margin:0 auto;
-    margin-top:2rem;
-    padding:1rem;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 1rem;
     background-color: var(--header-bg);
     border-radius: 4px;
-    max-width:700px;
+    max-width: 700px;
     text-align: center;
   }
 </style>
 
 <main>
   <Header />
-  <div class="message-wrapper">
-    <div class="message" hidden>⚠️ Die Daten vom RKI sind aktuell nicht verfügbar, angezeigt werden alte Daten!</div>
+  <div class="message-wrapper" hidden>
+    <div class="message">
+      ⚠️ Die Daten vom RKI sind aktuell nicht verfügbar, angezeigt werden alte Daten!
+    </div>
   </div>
   <div class="card-wrapper container">
     {#each sortedData as itemData}
