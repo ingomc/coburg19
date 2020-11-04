@@ -37,10 +37,26 @@
   .content {
     padding: 1rem;
   }
+  .message-wrapper {
+    text-align: center;
+  }
+  .message {
+    display:inline-block;
+    margin:0 auto;
+    margin-top:2rem;
+    padding:1rem;
+    background-color: var(--header-bg);
+    border-radius: 4px;
+    max-width:700px;
+    text-align: center;
+  }
 </style>
 
 <main>
   <Header />
+  <div class="message-wrapper">
+    <div class="message">⚠️ Die Daten vom RKI sind aktuell nicht verfügbar, angezeigt werden alte Daten!</div>
+  </div>
   <div class="card-wrapper container">
     {#each sortedData as itemData}
       <Card data={itemData} />
