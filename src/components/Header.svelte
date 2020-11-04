@@ -1,14 +1,27 @@
 <script>
+  import { fade, fly } from 'svelte/transition';
+  let visible = false;
+  setTimeout(function () {
+    visible = true;
+  }, 1000);
+  setTimeout(function () {
+    visible = false;
+  }, 3000);
 </script>
 
 <style>
-  header {
+  .header {
     display: block;
-    background-color: var(--header-bg);
-    text-align: center;
     position: sticky;
     top: 0;
+  }
+  header {
+    display: block;
+    position: relative;
+    background-color: var(--header-bg);
+    text-align: center;
     box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.6);
+    z-index:10;
   }
 
   .wrapper {
@@ -44,11 +57,27 @@
       align-items: center;
     }
   }
+
+  .message {
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index:5;
+  }
 </style>
 
-<header>
-  <div class="wrapper container">
-    <h1>🚦 Corona-Ampel für Coburg 🚦</h1>
-    <h2>7 Tage Inzidenz für Coburg und Landkreis:</h2>
-  </div>
-</header>
+<div class="header">
+  <header>
+    <div class="wrapper container">
+      <h1>🚦 Corona-Ampel für Coburg 🚦</h1>
+      <h2>7 Tage Inzidenz für Coburg und Landkreis:</h2>
+    </div>
+  </header>
+  {#if visible}
+    <div class="message" in:fly={{ y: -100, duration: 1000 }} out:fly={{ y: -100, duration: 1000 }}>
+      <slot />
+    </div>
+  {/if}
+</div>

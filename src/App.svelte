@@ -2,6 +2,7 @@
   import Card from './components/Card.svelte';
   import Header from './components/Header.svelte';
   import Social from './components/Social.svelte';
+import UpdateMessage from './components/UpdateMessage.svelte';
 
   export let date;
   export let data;
@@ -53,7 +54,9 @@
 </style>
 
 <main>
-  <Header />
+  <Header>
+    <UpdateMessage>Stand: {date}</UpdateMessage>
+  </Header>
   <div class="message-wrapper" hidden>
     <div class="message">
       ⚠️ Die Daten vom RKI sind aktuell nicht verfügbar, angezeigt werden alte Daten!
