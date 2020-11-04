@@ -74,3 +74,7 @@ small {
 .greentext {
   color: var(--info-bg);
 }
+
+[hidden] {
+  display: none!important;
+}
