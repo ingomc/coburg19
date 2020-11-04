@@ -55,7 +55,7 @@
 <main>
   <Header />
   <div class="message-wrapper">
-    <div class="message">⚠️ Die Daten vom RKI sind aktuell nicht verfügbar, angezeigt werden alte Daten!</div>
+    <div class="message" hidden>⚠️ Die Daten vom RKI sind aktuell nicht verfügbar, angezeigt werden alte Daten!</div>
   </div>
   <div class="card-wrapper container">
     {#each sortedData as itemData}
